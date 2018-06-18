@@ -30,19 +30,6 @@ describe('add todo', function () {
 
     });
 
-    it('finish todo', async function () {
-        let checkbox = (await page.$x('//section/ul/li/div[label/text()=\'todo1\']/input'))[0];
-        await checkbox.click();
-        await page.click('footer ul.filters a[href="#/active"]');
-        await page.screenshot({path: './screenshot/example.png'});
-        const haha = await page.$$eval('section ul.todo-list li label', function(results){
-            return results.map(function (result) {
-                return result.innerText;
-            })
-        });
-        expect(haha).not.to.include('todo1');
-    });
-
     after (async function () {
         await page.close();
     });

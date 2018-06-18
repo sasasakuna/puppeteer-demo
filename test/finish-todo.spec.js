@@ -16,12 +16,12 @@ describe('finish todo', function () {
     it('finish one todo', async function () {
 
         await page.waitForSelector('.new-todo');
-        await page.type('.new-todo', 'todo1');
+        await page.type('.new-todo', 'todo2');
         await page.keyboard.press('Enter');
 
         await page.waitFor(2000);
 
-        let checkbox = (await page.$x('//section/ul/li/div[label/text()=\'todo1\']/input'))[0];
+        let checkbox = (await page.$x('//section/ul/li/div[label/text()=\'todo2\']/input'))[0];
         await checkbox.click();
         await page.click('footer ul.filters a[href="#/active"]');
         await page.screenshot({path: './screenshot/example.png'});
@@ -30,7 +30,7 @@ describe('finish todo', function () {
                 return result.innerText;
             })
         });
-        expect(haha).not.to.include('todo1');
+        expect(haha).not.to.include('todo2');
 
     });
 
