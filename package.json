@@ -1,0 +1,17 @@
+{
+  "name": "puppeteer-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha bootstrap.js --timeout 30000 --recursive test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "lodash": "^4.17.10",
+    "mocha": "^5.1.1",
+    "puppeteer": "^1.3.0"
+  }
+}

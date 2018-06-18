@@ -1,0 +1,14 @@
+#
+node_modules/
+
+#
+screenshot/
+
+#
+package-lock.json
+
+#
+.idea/
+
+#
+npm-debug.log
